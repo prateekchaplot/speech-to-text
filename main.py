@@ -10,7 +10,7 @@ class AudioTranscription:
   def __init__(self, input_file_path):
     self.input_file_path = input_file_path
     self.temporary_wav_file = f"{uuid.uuid4()}.wav"
-    self.output_file_name = os.path.splitext(os.path.basename(input_file_path))[0] + ".txt"
+    self.output_file_name = 'output/' + os.path.splitext(os.path.basename(input_file_path))[0] + ".txt"
 
   # Convert MP3 to WAV using ffmpeg
   def convert_mp3_to_wav(self):
